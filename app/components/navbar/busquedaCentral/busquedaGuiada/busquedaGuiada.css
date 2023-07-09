@@ -1,0 +1,45 @@
+.container-izq {
+  margin-top: 1px;
+  width: 195px;
+  height: 60px;
+
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+
+  border-radius: 100px 0 0 100px;
+
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+
+  transition: all 0.2s ease-in-out;
+  box-shadow: #cccccc3f -5px 5px 5px 0px;
+}
+
+.box-1 {
+  width: 42px;
+  height: 60px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 100%;
+
+  position: absolute;
+  top: -1px;
+  right: -24px;
+
+  transition: all 0.2s ease-in-out;
+  background: transparent;
+}
+
+.container-izq:hover {
+  background: #5bd299;
+  color: #fff;
+  box-shadow: none;
+}
+
+.container-izq:hover .box-1 {
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+}
