@@ -1,0 +1,185 @@
+.card {
+  background-color: #e5f2ee;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px #00000040;
+  height: 288px;
+  width: 289px;
+}
+
+.card .overlap {
+  height: 284px;
+  position: relative;
+  top: 4px;
+}
+
+.card .hotel {
+  height: 280px;
+  left: 4px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 281px;
+}
+
+.card .card-secundaria {
+  background-color: #002633de;
+  border-radius: 40px 40px 10px 10px;
+  height: 91px;
+  left: 0;
+  position: absolute;
+  top: 193px;
+  width: 289px;
+}
+
+.card .pais-provincia {
+  height: 23px;
+  left: 210px;
+  position: absolute;
+  top: 211px;
+  width: 64px;
+}
+
+.card .ubicacion-marcador {
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  width: 4px;
+}
+
+.card .latacunga {
+  color: #5bd899;
+  font-family: "Kodchasan-Regular", Helvetica;
+  font-size: 10px;
+  font-weight: 400;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.card .ecuador {
+  color: #5bd899;
+  font-family: "Kodchasan-Regular", Helvetica;
+  font-size: 8px;
+  font-weight: 400;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 13px;
+}
+
+.card .caracteristicas {
+  color: #ffffff66;
+  font-family: "Kodchasan-Regular", Helvetica;
+  font-size: 5px;
+  font-weight: 400;
+  left: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 236px;
+}
+
+.card .direccion {
+  color: #ffffff66;
+  font-family: "Kodchasan-Bold", Helvetica;
+  font-size: 6px;
+  font-weight: 700;
+  left: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 225px;
+}
+
+.card .por-noche {
+  color: #ffffff;
+  font-family: "Kodchasan-Bold", Helvetica;
+  font-size: 7px;
+  font-weight: 700;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 259px;
+}
+
+.card .hotel-las-armenias {
+  color: #ffffff;
+  font-family: "Kodchasan-Regular", Helvetica;
+  font-size: 13px;
+  font-weight: 400;
+  left: 21px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 207px;
+}
+
+.card .precio {
+  height: 22px;
+  left: 21px;
+  position: absolute;
+  top: 254px;
+  width: 38px;
+}
+
+.card .overlap-group {
+  background-color: #ffffff;
+  border-radius: 3px;
+  height: 22px;
+  position: relative;
+  width: 36px;
+}
+
+.card .element {
+  color: #000000;
+  font-family: "JetBrains Mono-Regular", Helvetica;
+  font-size: 11px;
+  font-weight: 400;
+  left: 8px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 4px;
+}
+
+.card .calificacion {
+  height: 10px;
+  left: 248px;
+  position: absolute;
+  top: 265px;
+  width: 24px;
+}
+
+.card .estrella {
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 6px;
+}
+
+.card .text-wrapper {
+  color: #ffffff;
+  font-family: "Kodchasan-Bold", Helvetica;
+  font-size: 8px;
+  font-weight: 700;
+  left: 9px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 13px;
+}

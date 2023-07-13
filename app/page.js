@@ -1,9 +1,10 @@
+import CardsContainer from "./components/cards/CardsContainer"
 
 const Home = () => {
   return (
-    <div>
-      Pagina de inicio
-    </div>
+    <>
+      <CardsContainer />
+    </>
   )
 }
 

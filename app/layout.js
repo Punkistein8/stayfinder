@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={kodchasan.className}>
         <Navbar />
         <TiposHoteles />
-        {/* {children} */}
+        {children}
       </body>
     </html>
   )
