@@ -1,6 +1,8 @@
 import CardsContainer from "./components/cards/CardsContainer"
 
+
 const Home = () => {
+
   return (
     <>
       <CardsContainer />
