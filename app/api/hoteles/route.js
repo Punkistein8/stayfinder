@@ -1,7 +1,11 @@
 import { NextResponse } from "next/server";
+import { PrismaClient } from "@prisma/client";
+
+const stayfinder = new PrismaClient();
 
 export async function GET(request) {
-    return NextResponse.json({ text: 'From Get!' })
+    const data = await stayfinder.hoteles.findMany()
+    return NextResponse.json(data)
 }
 
 export async function POST(req, res) {
