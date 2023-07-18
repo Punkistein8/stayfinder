@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import Image from 'next/image'
 
@@ -10,9 +10,9 @@ import './cardStyle.css'
 
 const Card = ({ className, nombreHotel, estrellas, precio, foto }) => {
     return (
-        <div className={`card mb-24 mx-auto ${className}`}>
+        <div className={`card mb-24 mx-auto hover:scale-[102%] hover:shadow-2xl cursor-pointer transition-all ${className}`}>
             <div className="overlap">
-                <Image className="hotel rounded-md" alt="Pais" width={50} height={50} src={foto ? foto : Hotel} />
+                <Image className="hotel rounded-md" alt="Pais" width={500} height={500} src={foto ? foto : Hotel} />
                 <div className="card-secundaria" />
                 <div className="pais-provincia">
                     <Image className="ubicacion-marcador" alt="Ubicacion marcador" src={Marcador} />
@@ -22,7 +22,11 @@ const Card = ({ className, nombreHotel, estrellas, precio, foto }) => {
                 <p className="caracteristicas">económico • en las afueras</p>
                 <p className="direccion">Av. Simón Rodriguez y Otawa</p>
                 <div className="por-noche">por noche</div>
-                <div className="hotel-las-armenias">{nombreHotel ? nombreHotel : 'null'}</div>
+                <marquee className='hotel-las-armenias'>
+                    <p className="">
+                        {nombreHotel ? nombreHotel : 'null'}
+                    </p>
+                </marquee>
                 <div className="precio">
                     <div className="overlap-group">
                         <div className="element">{precio ? precio : 'null'}</div>

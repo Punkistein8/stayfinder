@@ -121,8 +121,10 @@
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  text-align: center;
+  text-align: left;
   top: 207px;
+  max-width: 65%;
+  text-overflow: clip;
 }
 
 .card .precio {
