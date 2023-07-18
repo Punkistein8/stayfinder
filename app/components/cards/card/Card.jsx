@@ -22,11 +22,11 @@ const Card = ({ className, nombreHotel, estrellas, precio, foto }) => {
                 <p className="caracteristicas">económico • en las afueras</p>
                 <p className="direccion">Av. Simón Rodriguez y Otawa</p>
                 <div className="por-noche">por noche</div>
-                <marquee className='hotel-las-armenias'>
-                    <p className="">
+                <div className='hotel-las-armenias'>
+                    <p className="truncate text-ellipsis overflow-hidden">
                         {nombreHotel ? nombreHotel : 'null'}
                     </p>
-                </marquee>
+                </div>
                 <div className="precio">
                     <div className="overlap-group">
                         <div className="element">{precio ? precio : 'null'}</div>
