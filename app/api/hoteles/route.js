@@ -4,8 +4,12 @@ import { PrismaClient } from "@prisma/client";
 const stayfinder = new PrismaClient();
 
 export async function GET(request) {
-    const data = await stayfinder.hoteles.findMany()
-    return NextResponse.json(data)
+    try {
+        const data = await stayfinder.hoteles.findMany()
+        return NextResponse.json(data)
+    } catch (error) {
+        throw new Error(error);
+    }
 }
 
 export async function POST(req, res) {

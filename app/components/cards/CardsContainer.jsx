@@ -1,10 +1,8 @@
-'use client'
+// 'use client'
 
 import Card from "./card/Card"
 
 const obtenerHoteles = async () => (await fetch('http://localhost:3000/api/hoteles', { method: 'GET', cache: 'no-store' }).then(data => data.json()).catch(err => console.log(err)))
-
-
 
 function capitalizeString(str) {
     // Asegurarse de que el parámetro sea una cadena
@@ -32,11 +30,15 @@ const CardsContainer = async () => {
         <div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4">
             {hoteles.map((item, index) => {
 
+                console.log(item)
+
                 return (
                     <Card
                         key={index}
                         nombreHotel={capitalizeWords(item.nombreHotel)}
                         estrellas={item.estrellas}
+                        precio={item.precio}
+                        foto={item.foto}
                     />
                 )
             })}

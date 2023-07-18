@@ -10,5 +10,7 @@ datasource db {
 model hoteles {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   estrellas   String
+  foto        String
   nombreHotel String
+  precio      String
 }
