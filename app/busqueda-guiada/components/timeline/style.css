@@ -1,0 +1,77 @@
+.activeEllipse {
+  background-color: #5db299 !important;
+  border-radius: 25.5px !important;
+  width: 51px !important;
+  height: 51px !important;
+  top: 0 !important;
+}
+
+.component {
+  height: 51px;
+  width: 506px;
+}
+
+.component .overlap-group {
+  height: 51px;
+  position: relative;
+}
+
+.component .line {
+  height: 1px;
+  left: 25px;
+  object-fit: cover;
+  position: absolute;
+  top: 25px;
+  width: 465px;
+  border: #fff solid 1px;
+}
+
+.component .ellipse {
+  background-color: #ffffff;
+  border-radius: 16.5px;
+  width: 33px;
+  height: 33px;
+  top: 9px;
+  left: 0px;
+  position: absolute;
+}
+
+.component .ellipse-1 {
+  background-color: #ffffff;
+  border-radius: 16.5px;
+  height: 33px;
+  left: 125px;
+  position: absolute;
+  top: 9px;
+  width: 33px;
+}
+
+.component .ellipse-2 {
+  background-color: #ffffff;
+  border-radius: 16.5px;
+  height: 33px;
+  left: 241px;
+  position: absolute;
+  top: 9px;
+  width: 33px;
+}
+
+.component .ellipse-3 {
+  background-color: #ffffff;
+  border-radius: 16.5px;
+  height: 33px;
+  left: 357px;
+  position: absolute;
+  top: 9px;
+  width: 33px;
+}
+
+.component .ellipse-4 {
+  background-color: #ffffff;
+  border-radius: 16.5px;
+  height: 33px;
+  left: 473px;
+  position: absolute;
+  top: 9px;
+  width: 33px;
+}

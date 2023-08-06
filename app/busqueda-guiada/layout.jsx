@@ -1,25 +1,18 @@
-import '../globals.css'
-import { Kodchasan } from 'next/font/google'
-
-const kodchasan = Kodchasan({ subsets: ['latin'], weight: ['400', '700'] })
+import Header from "./components/header";
 
 export const metadata = {
-    title: 'Búsqueda Guiada',
-    description: '¡Encuentra tu lugar ideal para quedarte!',
-    image: '@public/logoColor.svg',
-    type: 'website',
-    site_name: 'StayFinder',
-    locale: 'es_ES',
+  title: 'Búsqueda Guiada',
+  description: '¡Te guiaremos para encontrar el mejor lugar!',
+  locale: 'es_ES',
 }
 
-
 export default function layout({ children }) {
-    return (
-        <>
-            <div>
-                <h1>Búsqueda Guiada layout</h1>
-                {children}
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className='bg-[#002733] h-screen text-white'>
+        <Header />
+        {children}
+      </div>
+    </>
+  );
 }
