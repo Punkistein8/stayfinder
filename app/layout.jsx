@@ -1,7 +1,5 @@
-import Navbar from '@/app/components/navbar/Navbar'
 import './globals.css'
 import { Kodchasan } from 'next/font/google'
-import TiposHoteles from './components/tipos-hoteles/TiposHoteles'
 
 const kodchasan = Kodchasan({ subsets: ['latin'], weight: ['400', '700'] })
 
@@ -16,10 +14,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={kodchasan.className}>
-        <Navbar />
-        <TiposHoteles />
         {children}
       </body>
     </html>

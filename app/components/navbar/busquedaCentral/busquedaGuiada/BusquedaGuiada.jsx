@@ -1,4 +1,5 @@
 import styles from './busquedaGuiada.css'
+import Link from 'next/link'
 
 const BusquedaGuiada = () => {
   return (
@@ -6,7 +7,9 @@ const BusquedaGuiada = () => {
     //   Búsqueda Guiada
     // </button>
     <div className="container-izq cursor-pointer flex justify-center items-center rounded-r-full">
-      Busqueda Guiada
+      <Link href='/busqueda-guiada' passHref>
+        Búsqueda Guiada
+      </Link>
       <div className="box-1">
       </div>
     </div>

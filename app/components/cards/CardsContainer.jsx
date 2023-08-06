@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import Card from "./card/Card"
 
@@ -27,20 +27,32 @@ const CardsContainer = async () => {
     const hoteles = await obtenerHoteles()
 
     return (
-        <div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4">
-            {hoteles.map((item, index) => {
+        <>
+            {
+                hoteles.length > 0 ? (
+                    < div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4" >
+                        {
+                            hoteles.map((item, index) => {
 
-                return (
-                    <Card
-                        key={index}
-                        nombreHotel={capitalizeWords(item.nombreHotel)}
-                        estrellas={item.estrellas}
-                        precio={item.precio}
-                        foto={item.foto}
-                    />
+                                return (
+                                    <Card
+                                        key={index}
+                                        nombreHotel={capitalizeWords(item.nombreHotel)}
+                                        estrellas={item.estrellas}
+                                        precio={item.precio}
+                                        foto={item.foto}
+                                    />
+                                )
+                            })
+                        }
+                    </div >
+                ) : (
+                    <div className="flex flex-col justify-center items-center mt-10">
+                        <h1 className="text-2xl font-bold text-gray-700">No hay hoteles disponibles aún</h1>
+                    </div>
                 )
-            })}
-        </div>
+            }
+        </>
     )
 }
 
