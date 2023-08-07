@@ -10,7 +10,7 @@ import './cardStyle.css'
 
 const Card = ({ className, nombreHotel, estrellas, precio, foto }) => {
     return (
-        <div className={`card mb-24 mx-auto hover:scale-[102%] hover:shadow-2xl cursor-pointer transition-all ${className}`}>
+        <div className={`card mb-24 mx-auto hover:scale-[102%] hover:shadow-2xl cursor-pointer transition-all select-none ${className}`}>
             <div className="overlap">
                 <Image className="hotel rounded-md" alt="Pais" width={500} height={500} src={foto ? foto : Hotel} />
                 <div className="card-secundaria" />

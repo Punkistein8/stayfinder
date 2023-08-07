@@ -1,4 +1,4 @@
-import Link from "next/link";
+import 'animate.css';
 
 function LogoWhite(props) {
   return (
@@ -6,7 +6,7 @@ function LogoWhite(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 388.71 97.03"
-      className="w-2/3"
+      className="w-2/3 animate__animated animate__fadeInDown"
       {...props}
       fill="#fff"
     >
@@ -19,6 +19,7 @@ function LogoWhite(props) {
             fill="#fff"
             fontFamily="LatinWide,Wide Latin"
             letterSpacing="-.07em"
+            className="select-none"
           >
             {"Stay Finder"}
           </text>

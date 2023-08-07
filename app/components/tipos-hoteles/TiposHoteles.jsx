@@ -1,6 +1,6 @@
 'use client'
 
-import Item from "./item/Item"
+import Item from "@/app/components/tipos-hoteles/item/Item"
 import { useSearchParams } from "next/navigation";
 
 const TiposHoteles = () => {
