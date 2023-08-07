@@ -53,7 +53,7 @@ const Item = ({ name, label, selected }) => {
                 {name === 'BB' && <IconoBB hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'lujo' && <IconoLujo hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'resort' && <IconoResort hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
-                <small className={`text-center block text-xs transition-all ease-in-out ${selected ? 'text-white' : 'text-[#b9b9b9]'} ${hovered && 'text-white'}`}>{label}</small>
+                <small className={`text-center block text-xs transition-all ease-in-out select-none ${selected ? 'text-white' : 'text-[#b9b9b9]'} ${hovered && 'text-white'}`}>{label}</small>
             </div>
         </div>
 

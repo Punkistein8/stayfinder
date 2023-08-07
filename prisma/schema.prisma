@@ -8,9 +8,19 @@ datasource db {
 }
 
 model hoteles {
-  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
   estrellas   String
   foto        String
+  informacion String[]
+  nombreHotel String
+  precio      String
+}
+
+model hotelesPrueba {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  estrellas   String
+  foto        String
+  informacion String[]
   nombreHotel String
   precio      String
 }
