@@ -1,8 +1,7 @@
 'use client'
 
 import Card from "./card/Card"
-
-const obtenerHoteles = async () => (await fetch('http://localhost:3000/api/hoteles', { method: 'GET', cache: 'no-store' }).then(data => data.json()).catch(err => console.log(err)))
+import { useSearchParams } from "next/navigation";
 
 function capitalizeString(str) {
     // Asegurarse de que el parámetro sea una cadena
@@ -22,18 +21,18 @@ function capitalizeWords(str) {
     return str.split(' ').map(word => capitalizeString(word)).join(' ');
 }
 
-const CardsContainer = async () => {
+export default function CardsContainer({ hoteles }) {
 
-    const hoteles = await obtenerHoteles()
+    const params = useSearchParams(); // used to get the category from the url query
+    const category = params?.get('category');
 
     return (
         <>
             {
                 hoteles.length > 0 ? (
-                    < div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4" >
+                    <div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4" >
                         {
                             hoteles.map((item, index) => {
-
                                 return (
                                     <Card
                                         key={index}
@@ -55,5 +54,3 @@ const CardsContainer = async () => {
         </>
     )
 }
-
-export default CardsContainer

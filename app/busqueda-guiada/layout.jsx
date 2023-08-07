@@ -11,6 +11,7 @@ export default function layout({ children }) {
     <>
       <div className='bg-[#002733] h-screen text-white'>
         <Header />
+
         {children}
       </div>
     </>

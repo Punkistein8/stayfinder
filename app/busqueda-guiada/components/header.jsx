@@ -1,4 +1,5 @@
 import { Info } from "./Info/info";
+
 import LogoWhite from "./svgs/Logo"
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
         <Info />
       </div>
       <div className="flex justify-center">
-        <LogoWhite />
+          <LogoWhite />
       </div>
     </div>
   );

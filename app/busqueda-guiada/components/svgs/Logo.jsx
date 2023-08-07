@@ -1,7 +1,8 @@
-import * as React from "react"
+import Link from "next/link";
 
 function LogoWhite(props) {
   return (
+    // <Link href='/' >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 388.71 97.03"
@@ -24,6 +25,8 @@ function LogoWhite(props) {
         </g>
       </g>
     </svg>
+    // </Link>
+
   )
 }
 

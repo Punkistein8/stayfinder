@@ -2,12 +2,17 @@ import Navbar from '@/app/components/navbar/Navbar'
 import TiposHoteles from './components/tipos-hoteles/TiposHoteles'
 import CardsContainer from "./components/cards/CardsContainer"
 
-const Home = () => {
+import obtenerHoteles from '@/app/actions/getHoteles'
+
+const Home = async () => {
+
+  const hoteles = await obtenerHoteles();
+
   return (
     <>
       <Navbar />
       <TiposHoteles />
-      <CardsContainer />
+      <CardsContainer hoteles={hoteles} />
     </>
   )
 }
