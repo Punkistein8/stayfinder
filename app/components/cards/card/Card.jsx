@@ -1,4 +1,4 @@
-// 'use client'
+'use client'
 
 import Image from 'next/image'
 
@@ -8,14 +8,29 @@ import Hotel from '@/public/images/hotel1.webp'
 import Estrella from '@/public/svg/estrella.svg'
 import Marcador from '@/public/svg/ubicacion-marcador.svg'
 
+import ModalCard from './modal/Modal';
+
 import './cardStyle.css'
 
-const Card = ({ indice, className, nombreHotel, estrellas, precio, foto }) => {
-    // console.log(indice);
+const Card = ({ className, nombreHotel, estrellas, precio, foto }) => {
+
+
+
     return (
         <>
+            <ModalCard
+                nombreHotel={nombreHotel}
+                estrellas={estrellas}
+                precio={precio}
+                foto={foto}
+            />
             {
-                <div className={`card animate__animated animate__fadeIn mb-24 mx-auto hover:scale-[102%] hover:shadow-2xl cursor-pointer transition-all select-none ${className}`}>
+                <div
+                    data-te-toggle="modal"
+                    data-te-target="#exampleModal"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    className={`card animate__animated animate__fadeIn mb-24 mx-auto hover:scale-[102%] hover:shadow-2xl cursor-pointer transition-all select-none ${className}`}>
                     <div className="overlap">
                         <Image className="hotel rounded-md" alt="Pais" width={500} height={500} src={foto ? foto : Hotel} />
                         <div className="card-secundaria" />

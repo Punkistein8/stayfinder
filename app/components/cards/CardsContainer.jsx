@@ -57,7 +57,7 @@ export default function CardsContainer({ hoteles }) {
                         {
                             hoteles.map((item, index) => {
                                 return (
-                                    <div key={index} onClick={() => { console.log('click') }}>
+                                    <div key={index} >
                                         <Card
                                             indice={index}
                                             nombreHotel={capitalizeWords(item.nombreHotel)}
