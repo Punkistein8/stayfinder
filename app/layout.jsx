@@ -1,4 +1,5 @@
 import './globals.css'
+import "tw-elements/dist/css/tw-elements.min.css";
 import { Kodchasan } from 'next/font/google'
 
 const kodchasan = Kodchasan({ subsets: ['latin'], weight: ['400', '700'] })

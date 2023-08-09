@@ -6,12 +6,13 @@ export const metadata = {
   locale: 'es_ES',
 }
 
-export default function layout({ children }) {
+export default async function layout({ children }) {
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
   return (
     <>
       <div className='bg-[#002733] h-screen text-white'>
         <Header />
-
         {children}
       </div>
     </>
