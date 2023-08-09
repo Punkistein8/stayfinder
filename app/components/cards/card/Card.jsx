@@ -8,17 +8,21 @@ import Hotel from '@/public/images/hotel1.webp'
 import Estrella from '@/public/svg/estrella.svg'
 import Marcador from '@/public/svg/ubicacion-marcador.svg'
 
-import ModalCard from './modal/Modal';
+import dynamic from "next/dynamic";
+
 
 import './cardStyle.css'
 
-const Card = ({ className, nombreHotel, estrellas, precio, foto }) => {
+const Card = ({ indice, className, nombreHotel, estrellas, precio, foto }) => {
 
-
+    const DynamicModal = dynamic(() => import("./modal/Modal"), {
+        ssr: false,
+    });
 
     return (
         <>
-            <ModalCard
+            <DynamicModal
+                indice={indice}
                 nombreHotel={nombreHotel}
                 estrellas={estrellas}
                 precio={precio}
@@ -27,7 +31,7 @@ const Card = ({ className, nombreHotel, estrellas, precio, foto }) => {
             {
                 <div
                     data-te-toggle="modal"
-                    data-te-target="#exampleModal"
+                    data-te-target={`#exampleModal${indice}`}
                     data-te-ripple-init
                     data-te-ripple-color="light"
                     className={`card animate__animated animate__fadeIn mb-24 mx-auto hover:scale-[102%] hover:shadow-2xl cursor-pointer transition-all select-none ${className}`}>

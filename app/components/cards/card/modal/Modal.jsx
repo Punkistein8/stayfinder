@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Image from 'next/image'
 
-const ModalCard = ({ nombreHotel, estrellas, precio, foto }) => {
+const ModalCard = ({ indice, nombreHotel, estrellas, precio, foto }) => {
 
   useEffect(() => {
     const init = async () => {
@@ -26,7 +26,7 @@ const ModalCard = ({ nombreHotel, estrellas, precio, foto }) => {
       <div
         data-te-modal-init
         className="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none"
-        id="exampleModal"
+        id={`exampleModal${indice}`}
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -65,7 +65,16 @@ const ModalCard = ({ nombreHotel, estrellas, precio, foto }) => {
             <div className="relative flex-auto p-4" data-te-modal-body-ref>
               {/* foto */}
               <div className="flex flex-col items-center justify-center">
-                <Image className="hotel rounded-md" alt="Pais" width={250} height={250} src={foto ? foto : Hotel} />
+                <Image className="hotel rounded-md w-[280px] h-[280px]" alt="foto-hotel" width={250} height={250} src={foto ? foto : Hotel} />
+              </div>
+              {/* precio */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-row items-center justify-center">
+                  <div className="text-2xl font-medium leading-normal text-neutral-800 dark:text-neutral-200">
+                    {precio}
+
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -79,13 +88,13 @@ const ModalCard = ({ nombreHotel, estrellas, precio, foto }) => {
                 data-te-ripple-color="light">
                 Cerrar
               </button>
-              {/* <button
+              <button
                 type="button"
                 className="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                 data-te-ripple-init
                 data-te-ripple-color="light">
-                Save changes
-              </button> */}
+                ¡Contactar!
+              </button>
             </div>
           </div>
         </div>
