@@ -1,13 +1,16 @@
+'use client'
+import { HashLoader } from "react-spinners";
 
 const Loader = () => {
     return (
-        // spinner
-        <div className="d-flex justify-content-center">
-            <div className="spinner-border text-primary" role="status">
-                <span className="visually-hidden">Cargando...</span>
-            </div>
+        <div className="h-[70vh] flex flex-col justify-center items-center">
+            <HashLoader
+                color="#36d7b7"
+                height={8}
+                width={280}
+            />
+            <h1 className="text-[#36d7b7] pt-3">Cargando...</h1>
         </div>
-
     );
 }
 

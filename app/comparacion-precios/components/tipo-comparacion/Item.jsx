@@ -4,12 +4,10 @@ import qs from "query-string";
 import { useState, useCallback } from "react"
 import { useRouter, useSearchParams } from "next/navigation";
 
-import IconoEconomicos from "@/app/components/svgs/IconoEconomicos";
-import IconoBoutique from "@/app/components/svgs/IconoBoutique";
-import IconoHuespedes from "@/app/components/svgs/IconoHuespedes";
-
 import { PiCurrencyDollarSimpleDuotone } from 'react-icons/pi'
 import { BsStars } from 'react-icons/bs'
+import { PiSmileyAngry } from 'react-icons/pi'
+
 const Item = ({ name, label, selected }) => {
 
     const [hovered, setHovered] = useState(false);
@@ -58,8 +56,9 @@ const Item = ({ name, label, selected }) => {
                         <PiCurrencyDollarSimpleDuotone fill={`${(selected | hovered) ? '#fff' : '#b9b9b9'}`} hovered={hovered} selected={selected} className="transition-all ease-in-out" />
                     </div>
                 )}
-                {name === 'valorados' && <BsStars fill={`${(selected | hovered) ? '#fff' : '#b9b9b9'}`} hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
- 
+                {name === 'valorados' && <BsStars fill={`${(selected | hovered) ? '#fff' : '#b9b9b9'}`} size={24} hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
+                {name === 'novalorados' && <PiSmileyAngry fill={`${(selected | hovered) ? '#fff' : '#b9b9b9'}`} size={24} hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
+
                 <small className={`text-center block{text-xs transition-all ease-in-out select-none ${selected ? 'text-white' : 'text-[#b9b9b9]'} ${hovered && 'text-white'}`}>{label}</small>
             </div>
         </div>

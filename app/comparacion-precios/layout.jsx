@@ -1,9 +1,9 @@
 import Navbar from '@/app/components/navbar/Navbar'
-import TipoComparacion from '@/app/comparacion-precios/components/TipoComparacion'
+import TipoComparacion from '@/app/comparacion-precios/components/tipo-comparacion/TipoComparacion'
 
 
 export const metadata = {
-  title: 'Búsqueda Guiada',
+  title: 'Comparacion de Precios',
   description: '¡Te guiaremos para encontrar el mejor lugar!',
   locale: 'es_ES',
 }

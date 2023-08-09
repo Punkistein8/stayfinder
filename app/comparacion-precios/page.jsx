@@ -1,8 +1,18 @@
-import React from 'react'
+import obtenerHoteles from '@/app/actions/getHoteles'
+import ComparacionContainer from './components/tipo-comparacion/ComparacionContainer';
+import { Suspense } from 'react'
+import Loader from '../components/Loader';
 
-const page = () => {
+const page = async () => {
+  const hoteles = await obtenerHoteles();
+
   return (
-    <div>desde comparacion</div>
+    <>
+      <Suspense fallback={Loader}>
+        <ComparacionContainer hoteles={hoteles} />
+      </Suspense>
+
+    </>
   )
 }
 

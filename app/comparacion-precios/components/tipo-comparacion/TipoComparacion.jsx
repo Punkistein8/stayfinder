@@ -16,7 +16,7 @@ const TiposHoteles = () => {
         <Item name={'baratos'} label={'Más Baratos'} selected={comparacion === 'baratos'} />
         <Item name={'costosos'} label={'Más Costosos'} selected={comparacion === 'costosos'} />
         <Item name={'valorados'} label={'Mejor Valorados'} selected={comparacion === 'valorados'} />
-        <Item name={'otro'} label={'Otro'} selected={comparacion === 'otro'} />
+        <Item name={'novalorados'} label={'Peor Valorados'} selected={comparacion === 'novalorados'} />
         <div className="col-span-4">
         </div>
       </div>
