@@ -46,7 +46,7 @@ const Item = ({ name, label, selected }) => {
     }, [name, router, params]);
     return (
         <div className="col-span-1 text-center flex justify-center" onClick={handleClick}>
-            <div className={`cursor-pointer h-[80px] w-[90px] my-7 rounded-[10px] ${selected ? 'bg-[#5db299]' : 'bg-[#fcfcfc]'} flex flex-col justify-center items-center hover:bg-[#5db299] transition-all ease-in-out ${hovered && 'shadow-xl hover:scale-105'}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+            <div className={`cursor-pointer h-[80px] w-[90px] my-7 rounded-[10px] ${selected | hovered ? 'bg-[#5db299] shadow-xl hover:scale-105' : 'bg-[#fcfcfc]'} flex flex-col justify-center items-center hover:bg-[#5db299] transition-all ease-in-out`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
                 {name === 'economicos' && <IconoEconomicos hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'huespedes' && <IconoHuespedes hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'boutique' && <IconoBoutique hovered={hovered} selected={selected} className="transition-all ease-in-out" />}

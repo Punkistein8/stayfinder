@@ -41,6 +41,7 @@ const Item = ({ name, label, selected }) => {
 
         router.push(url);
     }, [name, router, params]);
+
     return (
         <div className="col-span-1 text-center flex justify-center" onClick={handleClick}>
             <div className={`cursor-pointer h-[80px] w-[90px] my-7 rounded-[10px] gap-3 ${selected ? 'bg-[#5db299]' : 'bg-[#fcfcfc]'} flex flex-col justify-center items-center hover:bg-[#5db299] transition-all ease-in-out ${hovered && 'shadow-xl hover:scale-105'}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>

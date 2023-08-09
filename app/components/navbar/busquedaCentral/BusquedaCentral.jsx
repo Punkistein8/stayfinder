@@ -6,7 +6,7 @@ const BusquedaCentral = () => {
     return (
         <div className="flex justify-center items-center">
             <BusquedaGuiada />
-            <BusquedaNormal />
+            {/* <BusquedaNormal /> */}
             <ComparacionPrecios />
         </div>
     )

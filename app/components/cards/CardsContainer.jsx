@@ -58,16 +58,14 @@ export default function CardsContainer({ hoteles }) {
                         {
                             hoteles.map((item, index) => {
                                 return (
-                                    <>
-                                        <Card
-                                            key={index}
-                                            indice={index}
-                                            nombreHotel={capitalizeWords(item.nombreHotel)}
-                                            estrellas={item.estrellas}
-                                            precio={item.precio}
-                                            foto={item.foto}
-                                        />
-                                    </>
+                                    <Card
+                                        key={index}
+                                        indice={index}
+                                        nombreHotel={capitalizeWords(item.nombreHotel)}
+                                        estrellas={item.estrellas}
+                                        precio={item.precio}
+                                        foto={item.foto}
+                                    />
                                 )
                             })
                         }

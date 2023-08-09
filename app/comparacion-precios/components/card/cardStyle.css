@@ -185,3 +185,7 @@
   top: 0;
   width: 13px;
 }
+
+#card0 {
+  --animate-delay: 2s;
+}

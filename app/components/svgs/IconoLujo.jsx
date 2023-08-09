@@ -1,6 +1,6 @@
 
-function IconoLujo({ hovered }) {
-    const color = hovered ? "#fff" : "#CECECE";
+function IconoLujo({ hovered, selected }) {
+    const color = hovered | selected ? "#fff" : "#CECECE";
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -3,10 +3,14 @@
 import { useSearchParams } from "next/navigation";
 import capitalizeWords from "app/helpers/capitalizeWords";
 
+import { Suspense } from 'react';
+
+
 import { BsHandIndex } from 'react-icons/bs'
 import { CgUnavailable } from 'react-icons/cg'
 
 import CardComparacion from "../card/CardComparacion";
+import Loader from "@/app/components/Loader";
 
 export default function ComparacionContainer({ hoteles }) {
 
@@ -20,28 +24,24 @@ export default function ComparacionContainer({ hoteles }) {
         const precioB = parseFloat(b.precio.replace('$', ''));
         return precioA - precioB;
       });
-      console.log(hoteles);
     } else if (comparacion === 'costosos') {
       hoteles = hoteles.sort((a, b) => {
         const precioA = parseFloat(a.precio.replace('$', ''));
         const precioB = parseFloat(b.precio.replace('$', ''));
         return precioB - precioA;
       });
-      console.log(hoteles);
     } else if (comparacion === 'valorados') {
       hoteles = hoteles.sort((a, b) => {
         const estrellasA = parseFloat(a.estrellas.replace(',', '.'));
         const estrellasB = parseFloat(b.estrellas.replace(',', '.'));
         return estrellasB - estrellasA;
       });
-      console.log(hoteles);
     } else if (comparacion === 'novalorados') {
       hoteles = hoteles.sort((a, b) => {
         const estrellasA = parseFloat(a.estrellas.replace(',', '.'));
         const estrellasB = parseFloat(b.estrellas.replace(',', '.'));
         return estrellasA - estrellasB;
       });
-      console.log(hoteles);
     }
   } else {
     return (
@@ -59,16 +59,19 @@ export default function ComparacionContainer({ hoteles }) {
           <div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4" >
             {
               hoteles.map((item, index) => {
-                console.log(index);
                 return (
-                  <CardComparacion
-                    key={index}
-                    indice={index}
-                    nombreHotel={capitalizeWords(item.nombreHotel)}
-                    estrellas={item.estrellas}
-                    precio={item.precio}
-                    foto={item.foto}
-                  />
+                  <Suspense fallback={Loader}>
+                    <CardComparacion
+                      key={index}
+                      indice={index}
+                      nombreHotel={capitalizeWords(item.nombreHotel)}
+                      estrellas={item.estrellas}
+                      precio={item.precio}
+                      foto={item.foto}
+                      comparacion={comparacion}
+                    />
+                  </Suspense>
+
                 )
               })
             }
