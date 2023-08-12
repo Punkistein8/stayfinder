@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import Image from 'next/image'
 
+import { LiaStarSolid } from 'react-icons/lia'
+
 const ModalCard = ({ indice, nombreHotel, estrellas, precio, foto }) => {
 
   useEffect(() => {
@@ -67,14 +69,21 @@ const ModalCard = ({ indice, nombreHotel, estrellas, precio, foto }) => {
               <div className="flex flex-col items-center justify-center">
                 <Image className="hotel rounded-md w-[280px] h-[280px]" alt="foto-hotel" width={250} height={250} src={foto ? foto : Hotel} />
               </div>
+              <hr className="my-4" />
               {/* precio */}
-              <div className="flex flex-col items-center justify-center">
-                <div className="flex flex-row items-center justify-center">
-                  <div className="text-2xl font-medium leading-normal text-neutral-800 dark:text-neutral-200">
-                    {precio}
-
-                  </div>
+              <div className="flex flex-row items-center justify-center">
+                <div className="flex flex-col justify-center items-center text-2xl font-medium leading-normal text-neutral-800 dark:text-neutral-200">
+                  <h2>{precio}</h2>
+                  <small className='text-gray-600 text-sm'>por noche</small>
                 </div>
+              </div>
+              <hr className="my-4" />
+              {/* stars */}
+              <div className="flex flex-col items-center justify-center mt-3">
+                <div className="flex flex-row items-center justify-center">
+                  <LiaStarSolid /> {estrellas}
+                </div>
+                <small className='text-gray-600 text-xs'>Latacunga, Ecuador</small>
               </div>
             </div>
 

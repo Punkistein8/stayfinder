@@ -52,30 +52,38 @@ export default function CardsContainer({ hoteles }) {
     return (
         <>
             {
-                hoteles.length > 0 ? (
-                    <div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4">
-                        {
-                            hoteles.map((item, index) => {
-                                return (
-                                    <div key={index} >
-                                        <Card
-                                            indice={index}
-                                            nombreHotel={capitalizeWords(item.nombreHotel)}
-                                            estrellas={item.estrellas}
-                                            precio={item.precio}
-                                            foto={item.foto}
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
-                    </div >
+                hoteles ? (
+                    hoteles.length > 0 ? (
+                        <div className="flex flex-col justify-center items-center mt-10 sm:grid sm:grid-cols-2 sm:gap-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 xl:gap-4">
+                            {
+                                hoteles.map((item, index) => {
+                                    return (
+                                        <div key={index} >
+                                            <Card
+                                                indice={index}
+                                                nombreHotel={capitalizeWords(item.nombreHotel)}
+                                                estrellas={item.estrellas}
+                                                precio={item.precio}
+                                                foto={item.foto}
+                                            />
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div >
+                    ) : (
+                        <div className="flex flex-col justify-center items-center mt-36 gap-5 border-2 w-1/2 mx-auto p-5 rounded-lg">
+                            <CgUnavailable size={32} className="fill-[#5DB299] text-[#5DB299]" />
+                            <h1 className="text-2xl text-gray-700 select-none">No hay hoteles de esta categoría disponibles aún...</h1>
+                        </div>
+                    )
                 ) : (
                     <div className="flex flex-col justify-center items-center mt-36 gap-5 border-2 w-1/2 mx-auto p-5 rounded-lg">
                         <CgUnavailable size={32} className="fill-[#5DB299] text-[#5DB299]" />
-                        <h1 className="text-2xl text-gray-700 select-none">No hay hoteles de esta categoría disponibles aún...</h1>
+                        <h1 className="text-2xl text-gray-700 select-none">No se pudo establecer conexion con la base de datos MongoDB 🍃...</h1>
                     </div>
                 )
+
             }
         </>
     )
