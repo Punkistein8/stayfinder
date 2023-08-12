@@ -4,9 +4,9 @@ import qs from "query-string";
 import { useState, useCallback } from "react"
 import { useRouter, useSearchParams } from "next/navigation";
 
-import IconoEconomicos from "@/app/components/svgs/IconoEconomicos";
-import IconoBoutique from "@/app/components/svgs/IconoBoutique";
-import IconoBb from "@/app/components/svgs/IconoBb";
+import IconoEconomicos from "../../svgs/IconoEconomicos";
+import IconoBoutique from "../../svgs/IconoBoutique";
+import IconoBb from "../../svgs/IconoBb";
 import IconoHuespedes from "../../svgs/IconoHuespedes";
 import IconoLujo from "../../svgs/IconoLujo";
 import IconoResort from "../../svgs/IconoResort";
