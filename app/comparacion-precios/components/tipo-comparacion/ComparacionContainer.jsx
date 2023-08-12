@@ -60,9 +60,8 @@ export default function ComparacionContainer({ hoteles }) {
             {
               hoteles.map((item, index) => {
                 return (
-                  <Suspense fallback={Loader}>
+                  <Suspense fallback={Loader} key={index}>
                     <CardComparacion
-                      key={index}
                       indice={index}
                       nombreHotel={capitalizeWords(item.nombreHotel)}
                       estrellas={item.estrellas}

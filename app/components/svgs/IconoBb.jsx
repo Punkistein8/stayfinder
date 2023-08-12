@@ -1,4 +1,3 @@
-import React from "react";
 
 function IconoBb({ hovered, selected }) {
     return (

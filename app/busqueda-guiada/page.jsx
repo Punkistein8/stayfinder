@@ -31,7 +31,7 @@ import Wifi from '@/public/svg/busqueda-guiada/4/wifi.svg'
 import Link from 'next/link';
 
 
-const page = () => {
+const Page = () => {
 
   const [actualQuestion, setActualQuestion] = useState(0)
   const [answers, setAnswers] = useState([])
@@ -129,4 +129,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
