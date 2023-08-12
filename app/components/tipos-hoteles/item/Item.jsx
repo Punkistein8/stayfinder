@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import IconoEconomicos from "@/app/components/svgs/IconoEconomicos";
 import IconoBoutique from "@/app/components/svgs/IconoBoutique";
-import IconoBB from "@/app/components/svgs/IconoBb";
+import IconoBb from "@/app/components/svgs/IconoBb";
 import IconoHuespedes from "../../svgs/IconoHuespedes";
 import IconoLujo from "../../svgs/IconoLujo";
 import IconoResort from "../../svgs/IconoResort";
@@ -50,7 +50,7 @@ const Item = ({ name, label, selected }) => {
                 {name === 'economicos' && <IconoEconomicos hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'huespedes' && <IconoHuespedes hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'boutique' && <IconoBoutique hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
-                {name === 'BB' && <IconoBB hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
+                {name === 'BB' && <IconoBb hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'lujo' && <IconoLujo hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 {name === 'resort' && <IconoResort hovered={hovered} selected={selected} className="transition-all ease-in-out" />}
                 <small className={`text-center block text-xs transition-all ease-in-out select-none ${selected ? 'text-white' : 'text-[#b9b9b9]'} ${hovered && 'text-white'}`}>{label}</small>
