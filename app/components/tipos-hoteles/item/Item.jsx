@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 import IconoEconomicos from "@/app/components/svgs/IconoEconomicos";
 import IconoBoutique from "@/app/components/svgs/IconoBoutique";
-import IconoBB from "@/app/components/svgs/IconoBB";
+import IconoBB from "@/app/components/svgs/IconoBb";
 import IconoHuespedes from "../../svgs/IconoHuespedes";
 import IconoLujo from "../../svgs/IconoLujo";
 import IconoResort from "../../svgs/IconoResort";
