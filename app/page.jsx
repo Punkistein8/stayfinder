@@ -12,6 +12,7 @@ const Home = async () => {
 
   const hoteles = await obtenerHoteles();
 
+
   return (
     <>
       <Navbar />
