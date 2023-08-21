@@ -17,6 +17,6 @@ const obtenerHoteles = cache(async () => {
   const stayfinder = new PrismaClient();
   const data = await stayfinder.hoteles.findMany()
   return data;
-})
+}, revalidate)
 
 export default obtenerHoteles;
