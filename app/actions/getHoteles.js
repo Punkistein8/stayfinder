@@ -1,5 +1,10 @@
 import { PrismaClient } from '@prisma/client'
 
+import { cache } from 'react'
+
+export const revalidate = 1500 // revalidate
+
+
 // export default async function obtenerHoteles() {
 //   const url = process.env.LOCAL_API
 //   return (
@@ -8,8 +13,10 @@ import { PrismaClient } from '@prisma/client'
 //       .catch(err => console.log(err))
 //   )
 // }
-export default async function obtenerHoteles() {
+const obtenerHoteles = cache(async () => {
   const stayfinder = new PrismaClient();
   const data = await stayfinder.hoteles.findMany()
   return data;
-}
+})
+
+export default obtenerHoteles;
