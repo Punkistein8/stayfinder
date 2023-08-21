@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 
 import { cache } from 'react'
 
-export const revalidate = 1500 // revalidate
+export const revalidate = 100 // revalidate
 
 
 // export default async function obtenerHoteles() {
