@@ -72,8 +72,8 @@ const Page = () => {
                     <h1 className={`select-none text-center text-3xl pb-20 animate__animated animate__fadeInDown`}>¿Qué tipo de  <span className="font-bold">alojamiento</span> prefieres?</h1>
 
                     <div className="flex justify-center gap-20">
-                      <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles Económicos'} svg={Economicos} />
-                      <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Casas de Huéspedes'} svg={Huespedes} />
+                      <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles Económicos'} svg={Economicos} queryRouteString={'economicos'} />
+                      <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Casas de Huéspedes'} svg={Huespedes} queryRouteString={'huespedes'} />
                     </div>
                   </div>
 
@@ -84,8 +84,8 @@ const Page = () => {
                       <h1 className={`select-none text-center text-3xl pb-20 animate__animated animate__fadeInDown`}>¿Qué tipo de  <span className="font-bold">alojamiento</span> prefieres?</h1>
 
                       <div className="flex justify-center gap-20">
-                        <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles Boutique'} svg={Boutique} />
-                        <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hotel B&B'} svg={BB} />
+                        <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles Boutique'} svg={Boutique} queryRouteString={'boutique'} />
+                        <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hotel B&B'} svg={BB} queryRouteString={'BB'} />
                       </div>
                     </div>
                   ) : answers[1] == 'Lo más costoso' ?
@@ -95,8 +95,8 @@ const Page = () => {
                         <h1 className={`select-none text-center text-3xl pb-20 animate__animated animate__fadeInDown`}>¿Qué tipo de  <span className="font-bold">alojamiento</span> prefieres?</h1>
 
                         <div className="flex justify-center gap-20">
-                          <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles de Lujo'} svg={Lujo} />
-                          <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles Resort'} svg={Resort} />
+                          <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles de Lujo'} svg={Lujo} queryRouteString={'lujo'} />
+                          <Box answers={answers} setAnswers={setAnswers} setActualQuestion={setActualQuestion} actualQuestion={actualQuestion} text={'Hoteles Resort'} svg={Resort} queryRouteString={'resort'} />
                         </div>
                       </div>
                     ) : null
@@ -117,7 +117,7 @@ const Page = () => {
                     </div>
                     {/* boton de finalizar */}
                   </div>
-                  <Link href={'/'} >
+                  <Link href={`/?category=${answers[2]}`} >
                     <div className="flex justify-center">
                       <button onClick={() => setActualQuestion(actualQuestion + 1)} className="bg-[#5DB299] hover:bg-[#4ca588] text-white font-bold py-2 px-4 rounded-full">¡Finalizar!</button>
                     </div>
