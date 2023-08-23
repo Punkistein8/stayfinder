@@ -71,7 +71,7 @@ const ModalCard = ({ indice, nombreHotel, estrellas, precio, foto, url }) => {
                 <Image className="hotel rounded-md w-[280px] h-[280px]" alt="foto-hotel" width={250} height={250} src={foto ? foto : Hotel} />
               </div>
               <hr className="my-4" />
-              {/* precio */}
+              {/* precio  */}
               <div className="flex flex-row items-center justify-center">
                 <div className="flex flex-col justify-center items-center text-2xl font-medium leading-normal text-neutral-800 dark:text-neutral-200">
                   <h2>{precio}</h2>
