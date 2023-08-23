@@ -13,7 +13,7 @@ import dynamic from "next/dynamic";
 
 import './cardStyle.css'
 
-const Card = ({ indice, className, nombreHotel, estrellas, precio, foto }) => {
+const Card = ({ indice, className, nombreHotel, estrellas, precio, foto, url }) => {
 
     const DynamicModal = dynamic(() => import("./modal/Modal"), {
         ssr: false,
@@ -27,6 +27,7 @@ const Card = ({ indice, className, nombreHotel, estrellas, precio, foto }) => {
                 estrellas={estrellas}
                 precio={precio}
                 foto={foto}
+                url={url}
             />
             {
                 <div

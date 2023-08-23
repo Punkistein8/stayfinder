@@ -65,6 +65,7 @@ export default function CardsContainer({ hoteles }) {
                                                 estrellas={item.estrellas}
                                                 precio={item.precio}
                                                 foto={item.foto}
+                                                url={item.url}
                                             />
                                         </div>
                                     )

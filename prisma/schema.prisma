@@ -14,6 +14,7 @@ model hoteles {
   informacion String[]
   nombreHotel String
   precio      String
+  url         String
 }
 
 model hotelesPrueba {
